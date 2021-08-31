@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/home.css" type="text/css" media="screen" >
+  </head>
+<body>
+
+
+
+<form action="\predict" method="post" class="home_form" >
+  <h2 class="header">Please fill all details below </h1>
+  <div class="field">
+    <label for="Year">Manufacturing Year : </label><br>
+    <input type="number" id="Year" name="Year" value="2001">
+  </div>
+  <div>
+    <label for="Mileage">Mileage : </label><br>
+  <input type="number" id="Mileage" name="Mileage" value="15">
+  </div>
+  <div>
+    <label for="Engine">Engine :</label><br>
+    <input type="number" id="Engine" name="Engine" value="1500">
+  </div>
+  <div>
+    <label for="KDriven">Kilometers_Driven:</label><br>
+    <input type="number" id="KDriven" name="KDriven" value="75000">
+  </div>
+  <div>
+    <label for="Location">Select Location :</label><br>
+  <select name="Location" id="Location">
+    <option value="Bangalore">Bangalore</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Coimbatore">Coimbatore</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Jaipur">Jaipur</option>
+    <option value="Kochi">Kochi</option>
+    <option value="Kolkata">Kolkata</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Pune">Pune</option>
+  </select>
+   </div>
+   <div>
+    <label for="ftype">Select Fuel Type :</label><br>
+    <select name="ftype" id="ftype">
+      <option value="Diesel">Diesel</option>
+      <option value="LPG">LPG</option>
+      <option value="Petrol">Petrol</option>
+    </select>
+   </div>
+   <div>
+    <label for="etype">Select Transmission Type :</label>
+    <select name="etype" id="etype">
+      <option value="Automatic">Automatic</option>
+      <option value="Manual">Manual</option>
+    </select>
+   </div>
+  <br>
+<div>
+  <button type="submit" class="submit_btn">Submit </button>
+</div>
+<h3 style="text-align: center;">{{ prediction_text }}</h3>
+
+  <!-- <input type="text" id="Location" name="Location" value="Bangalore"><br> -->
+</form> 
+        <p class = 'footer'>©2021 Amaresh Kumar Sahoo</p>
+
+</body>
+</html>
