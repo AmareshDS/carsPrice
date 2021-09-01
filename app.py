@@ -1,6 +1,7 @@
 from flask import Flask,render_template,url_for,redirect,request
 import numpy as np
 import pickle 
+import joblib
 
 app=Flask(__name__)
 
@@ -159,8 +160,8 @@ def predict():
         
         # with open('lrm.pkl','rb') as file:
         #      model=pickle.load(file)
-        with open('Pk_RandomForest.pkl','rb') as file:
-             modelrf=pickle.load(file)
+        with open('RandomForest.joblib','rb') as file:
+             modelrf=joblib.load(file)
         
         price=modelrf.predict([[mf_year,
                               Mileage,
